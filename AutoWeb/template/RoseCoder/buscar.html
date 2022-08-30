@@ -1,0 +1,27 @@
+{% extends "RoseCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">ESTE TITULO VIENE DE INICIO</h1>
+{% endblock %}
+
+
+{% block contenidoacambiar %}
+
+<h1>Buscador de aficionados a la F1</h1>
+
+
+<form action="{% url 'Buscar' %}" method="GET"> {% csrf_token %}
+
+<p>Nombre: <input type="text" name="nombre",apellido="apellido",fecha_Nacimiento="fecha_Nacimiento"></p>
+
+
+<input type="submit", value="Buscar">
+
+</form>
+
+<h2 >{{ mensaje }}</h2>
+
+{% endblock %}

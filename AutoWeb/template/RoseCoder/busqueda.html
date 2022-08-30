@@ -1,0 +1,19 @@
+{% extends "RoseCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block contenidoacambiar %}
+
+<h1>resultados busqueda</h1>
+
+{% for Persona in personas %}
+
+<h2>{{ Persona.nombre }}</h2>
+<h2>{{ Persona.apellido }}</h2>
+--
+
+{% endfor %}
+
+
+{% endblock %}

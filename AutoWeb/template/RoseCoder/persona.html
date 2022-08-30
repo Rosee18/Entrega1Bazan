@@ -1,0 +1,19 @@
+{% extends "RoseCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block contenidoacambiar %}
+
+<form action="{% url 'personas' %}" method="POST"> {% csrf_token %}
+    <h1 class="mb-5">Dejamos tus datos para mas informacion</h1>
+
+<table>
+
+    {{ formula.as_table }}
+</table>
+
+<input type="submit", value="Enviar">
+
+</form>
+ {% endblock %}

@@ -1,0 +1,27 @@
+{% extends "RoseCoder/padre.html" %} 
+
+{% load static %} 
+
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">ESTE TITULO VIENE DE INICIO</h1>
+{% endblock %}
+
+{% block contenidoacambiar %}
+<h1>FORMULARIO DE Circuito</h1>
+
+<form action="{% url 'circuitos' %}", method="POST"> {% csrf_token %}
+
+  <table>
+
+    {{ formulari.as_table }}
+
+  </table>
+
+  <input type="submit" value="Enviar">
+
+
+
+</form>
+
+{% endblock %}
